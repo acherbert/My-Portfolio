@@ -1,0 +1,322 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Ashh Interactive Portfolio</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+/* css start for tab picks */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+/* css END for tab picks */
+</style>
+      
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <header>
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">AH Designs </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Me</a>
+          </li>
+      </ul>
+
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<br /><br /><br /><br /><br /><br /><br /><br />
+
+  <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('Web Design')"> Web Design</button>
+      <button class="btn" onclick="filterSelection('Graphic Design')"> Graphic Design</button>
+      <button class="btn" onclick="filterSelection('Apps')"> Apps</button>
+      <button class="btn" onclick="filterSelection('Game')"> Games</button>
+     
+    </div>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column Web Design">
+        <div class="content">
+          <img src="images/cipher.jpg" alt="Web: Cipher" style="width:100%">
+          <h4>Cipher</h4>
+          <p>Created in Visual Studios with HTML and JS</p>
+        </div>
+      </div>
+      <div class="column Web Design">
+        <div class="content">
+        <img src="images/chatbot.jpg" alt="Web: Chat Bot" style="width:100%">
+          <h4>Chatbot</h4>
+          <p>Created in visual studio with HTML, CSS, and JavaScript. Chatbot is both a site and an app. </p>
+        </div>
+      </div>
+      <div class="column Web Design">
+          <div class="content">
+          <img src="images/lp.jpg" alt="Web: Leroul Plumbing" style="width:100%">
+            <h4>Leroul plumbing Website </h4>
+            <p>Created in Visual Studio Code using HTMl, CSS, Javascript, and Bootstrap,</p>
+          </div>
+        </div>
+      <div class="column Graphic Design">
+        <div class="content">
+        <img src="images/travel.jpg" alt="GD: Travel Poster" style="width:100%">
+          <h4>Travel Poster</h4>
+          <p>Created in Illustrator</p>
+        </div>
+      </div>
+      
+      <div class="column Graphic Design">
+        <div class="content">
+          <img src="images/food2.jpg" alt="GD: A Little Italian Menu and Rack Card" style="width:100%">
+          <h4>Menu and Rack Card</h4>
+          <p>Rebradning of A Little Italian made in Adobe Illustrator</p>
+        </div>
+      </div>
+      <div class="column Graphic Design">
+          <div class="content">
+            <img src="images//foodtruck.jpg" alt="GD: A Little Italian Truck Wrap" style="width:100%">
+            <h4>Truck Wrap</h4>
+            <p>Rebradning of A Little Italian made in Adobe Illustrator</p>
+          </div>
+        </div>
+      <div class="column Graphic Design">
+        <div class="content">
+        <img src="images/pixel.jpg" alt="GD: Pixel Map" style="width:100%">
+          <h4>Pixel Map</h4>
+          <p>A Motion Graphics peice created in Adobe After Effects CC 2019.</p>
+        </div>
+      </div>
+     
+    
+      <div class="column Apps">
+        <div class="content">
+          <img src="images/war.jpg" alt="App War" style="width:100%">
+          <h4>War:Card Game</h4>
+          <p>Created in Xcode using Swift.</p>
+        </div>
+      </div>
+    
+      <div class="column Apps">
+          <div class="content">
+          <img src="images/fc.jpg" alt="App FirstCoast Restaurant Finder" style="width:100%">
+            <h4>First Coast Restaurant Location finder app</h4>
+            <p>Created in Xcode using swift and an API.</p>
+          </div>
+        </div>
+        <div class="column Apps">
+            <div class="content">
+            <img src="images/brew.jpg" alt="App Brewery" style="width:100%">
+              <h4>Brewery App</h4>
+              <p>Created in Xcode using swift and an API</p>
+            </div>
+          </div>
+          <div class="column Apps">
+              <div class="content">
+              <img src="images/weather.jpg" alt="App Weather" style="width:100%">
+                <h4>Weather App</h4>
+                <p>Created in xcode using swift and an API</p>
+              </div>
+            </div>
+      <div class="column Game">
+        <div class="content">
+        <img src="images/soccer.jpg" alt="3D Game: Soccer" style="width:100%">
+          <h4>3D Soccer Game</h4>
+          <p>Created in Unity using multiple .cs scripts.</p>
+        </div>
+      </div>
+      <div class="column Graphic Design">
+          <div class="content">
+          <img src="images/cauldron.jpg" alt="Motion Graphic: Cauldron" style="width:100%">
+            <h4>Cauldron</h4>
+            <p>A motion graphics peice created in Adobe After Effects CC 2019.</p>
+          </div>
+        </div>
+       
+    <!-- END GRID -->
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    
+  
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2019 Ashh Interactive s</p>
+  </footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.3/assets/js/vendor/jquery-slim.min.js"><\/script>')</script><script src="/docs/4.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script></body>
+</html>
